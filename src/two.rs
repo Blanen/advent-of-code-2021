@@ -6,11 +6,11 @@ pub async fn day_two() {
         .await
         .unwrap();
 
-    let input_split_and_parsed = input
+    let input_split = input
         .split("\n")
         .map(|x| x.split(" "));
     
-    let location = input_split_and_parsed
+    let location = input_split
         .fold((0, 0), |acc, line| {
             let parsed_line = line
             .tuple_windows()
